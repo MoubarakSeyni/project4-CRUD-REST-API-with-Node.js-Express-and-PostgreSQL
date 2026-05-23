@@ -2,8 +2,14 @@
   "name": "node-api-postgres",
   "version": "1.0.0",
   "description": "RESTful API with Node.js, Express, and PostgreSQL",
-  "main": "index.js",
+  "main": "Server/index.js",
   "type": "module",
+  "scripts": {
+    "start": "npm run build:client && node Server/index.js",
+    "dev": "nodemon Server/index.js",
+    "dev:client": "npm run dev --prefix Client",
+    "build:client": "npm run build --prefix Client"
+  },
   "license": "MIT",
   "dependencies": {
     "dotenv": "^17.4.2",
